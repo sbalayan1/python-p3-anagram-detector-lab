@@ -6,19 +6,19 @@ class Anagram:
     def match(self, arr_of_words):
         output = []
         for word in arr_of_words:
-            if (self.is_anagram(word) == True):
+            if (sorted(list(word)) == sorted(list(self.word))):
                 output.append(word)
         
         return output
 
-    def is_anagram(self, word):
-        sortedA = list(word)
-        sortedB = list(self.word)
-        sortedA.sort()
-        sortedB.sort()
-        if sortedA == sortedB:
-            return True
+    # def is_anagram(self, word):
+    #     sortedA = list(word)
+    #     sortedB = list(self.word)
+    #     sortedA.sort()
+    #     sortedB.sort()
+    #     if sortedA == sortedB:
+    #         return True
         
-        return False
+    #     return False
    
         
